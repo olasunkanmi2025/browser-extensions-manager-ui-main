@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +14,6 @@
   body {
     background-color: hsl(227, 75%, 14%);
     color: #ffffff;
-    padding: 20px;
   }
   
   .container {
@@ -21,7 +21,22 @@
     margin: auto;
   }
   
-  /* Headers */
+  /* Headers */ 
+   /* header{
+    display: flex;
+    align-items: center;
+    padding: auto 20px;
+  }
+  header h4{
+    display: flex;
+    margin-right: 10px; 
+  } */
+   header::before{
+    content: url(/assets/images/logo.svg);
+   }
+   header::after{
+    content: url(/assets/images/icon-sun.svg);
+   }
   header h1 {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -36,8 +51,11 @@
   /* Filter Buttons */
   .filter-buttons {
     display: flex;
+    text-align: center;
+    justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
+
   }
   
   .filter {
@@ -48,6 +66,8 @@
     color: #fff;
     cursor: pointer;
     transition: 0.3s;
+    align-items: center;
+    margin-left: 30px;
   }
   
   .filter:hover {
@@ -78,6 +98,11 @@
   }
   
   /* Info Section */
+  .extension-info{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
   .extension-info h3 {
     margin-bottom: 5px;
     font-size: 1.2rem;
@@ -95,7 +120,10 @@
     align-items: center;
     margin-top: 15px;
   }
-  
+  .icon{
+    width: 40px;
+    height: 40px;
+  }
   /* Remove Button */
   .remove-btn {
     background-color: hsl(226, 25%, 17%);
@@ -165,8 +193,19 @@
     } 
   }
 
+  /* MEDIA QUERY FOR WIDTH:1000 AND ABOVE */
+  @media (min-width:1000) {
+    .extension-card{
+      display: flex;
+      min-width: 1000px;
+    }
+  }
+
   img{
     display: block;
     max-width: 100%;
-    
   }
+
+p{
+  font-size: 16px;
+}
